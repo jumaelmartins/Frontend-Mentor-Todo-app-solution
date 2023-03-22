@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -7,7 +7,37 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div id="app"></div>
+    <section>
+      <header>
+        <h1>Todo</h1>
+        <img width="16" src="./src/assets/images/icon-moon.svg" alt="">
+      </header>
+    </section>
+
+    <form action="">
+      <input type="text" placeholder="Ceate a new todo"/>
+    </form>
+
+    <section>
+      <ul>
+        <li>
+          <input type="checkbox" />
+          <label for="">Tarefa 01</label>
+          <img width="16" src="./src/assets/images/icon-cross.svg" alt="" />
+        </li>
+      </ul>
+      <div>
+        <p>1 item left</p>
+        <p>clear completed</p>
+      </div>
+
+      <div class="filter">
+        <p>all</p>
+        <p>active</p>
+        <p>completed</p>
+      </div>
+    </section>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>
