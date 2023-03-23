@@ -14,7 +14,7 @@
 
 [X] - Função para Criar ToDO
 [X] - Função para remover ToDO
-[] - Função para editar ToDo
+[X] - Função para editar ToDo
 [] - Função para adicionar Todo no Local Storage
 [] - Função para carregar Todo do Local Storage
 

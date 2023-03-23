@@ -19,3 +19,9 @@ const removeTodo = (id) => {
 
   if (indexItenToRemove !== -1) todoList.splice(indexItenToRemove, 1);
 };
+
+const editTodo = (id, toDo) => {
+    const itenToEdit = todoList.filter((todo) => todo.todoId === id);
+    const indexItenToEdit = todoList.indexOf(itenToEdit[0]);
+    todoList[indexItenToEdit] = toDo;
+}
