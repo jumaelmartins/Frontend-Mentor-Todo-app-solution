@@ -12,13 +12,21 @@
 
 ### Etapa 2
 
-[X] - Função para Criar ToDO
-[X] - Função para remover ToDO
+[X] - Função para Criar ToDo
+[X] - Função para remover ToDo
 [X] - Função para editar ToDo
-[] - Função para adicionar Todo no Local Storage
-[] - Função para carregar Todo do Local Storage
+[X] - Função para adicionar Todo no Local Storage
+[X] - Função para carregar Todo do Local Storage
+
 
 ### Etapa 3
+
+[] - Estilização Basica CSS
+[] - Capturar os Elementos HTML com JS
+[] - Adicionar EventListenner para acionar as Funções de Adicionar e Remover Itens.
+[] - Carregar os Items na Pagina.
+
+### Etapa 4
 
 [] - Tratar Responsividade
 [] - Revisar Codigo
