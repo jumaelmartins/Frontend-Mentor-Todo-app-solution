@@ -21,6 +21,7 @@
 
 ### Etapa 3
 
+[] - CSS Resetado
 [] - Estilização Basica CSS
 [] - Capturar os Elementos HTML com JS
 [] - Adicionar EventListenner para acionar as Funções de Adicionar e Remover Itens.

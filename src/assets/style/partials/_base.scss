@@ -1,1 +1,26 @@
 @use "variables";
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+* {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+
+    body {
+        font-size: 1.8rem;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+a a:visited a:link a:hover{
+    text-decoration: none;
+    color: inherit;
+}
