@@ -24,6 +24,8 @@
 [x] - CSS Resetado
 [x] - Estilização Basica CSS
 [] - Capturar os Elementos HTML com JS
+    [x] - Input
+    [x] - UL
 [] - Adicionar EventListenner para acionar as Funções de Adicionar e Remover Itens.
 [] - Carregar os Items na Pagina.
 

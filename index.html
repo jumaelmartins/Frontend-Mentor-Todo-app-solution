@@ -18,7 +18,7 @@
           />
         </header>
 
-        <form class="form__light-mode">
+        <form id="todo-form" action="post" class="form__light-mode">
           <input
             class="form__input_disabled_light-mode"
             type="checkbox"
@@ -26,6 +26,7 @@
             placeholder="Ceate a new todo"
           />
           <input
+            id="input-todo"
             class="form__input_light-mode"
             type="text"
             placeholder="Ceate a new todo"
@@ -34,7 +35,9 @@
       </section>
 
       <section class="todo-list__container">
-        <ul class="todo-list__light-mode">
+        <ul
+        id="todo-list"
+         class="todo-list__light-mode">
           <li class="todo-list__item_light-mode">
             <label>
               <input class="todo-list__input_light-mode" type="checkbox" />
