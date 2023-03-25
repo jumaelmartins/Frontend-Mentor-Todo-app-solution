@@ -1,6 +1,6 @@
 import { setLocalStorageIten, getLocalStorageItens } from "./localStorage";
 import { v4 as uuidv4 } from "uuid";
-export const todoList = [];
+export let todoList = getLocalStorageItens();
 
 export const addTodo = (toDoText) => {
   let id = uuidv4();
@@ -10,6 +10,7 @@ export const addTodo = (toDoText) => {
     todoId: id,
   };
   todoList.push(todoObj);
+  setLocalStorageIten();
 };
 
 export const removeTodo = (id) => {
@@ -30,17 +31,17 @@ export const editTodo = (id, toDo) => {
 };
 
 export const loadTodo = () => {
+  const li = document.createElement("li");
   const todoListHtml = document.querySelector("#todo-list");
   todoListHtml.innerHTML = "";
-  const newHtml = todoList.map(convertTodoListToHtml).join("")
-  const li = document.createElement("li")
-  li.innerHTML += newHtml
-  todoListHtml.appendChild(li)
+  const newHtml = todoList.map(convertTodoListToHtml).join("");
+  li.innerHTML = newHtml;
+  todoListHtml.appendChild(li);
 };
 
 const convertTodoListToHtml = (todo) => {
   return ` 
-  <li id="${todo.id}" class="todo-list__item_light-mode">
+  <li id="${todo.todoId}" class="todo-list__item_light-mode">
     <label>
       <input class="todo-list__input_light-mode" type="checkbox" />
       ${todo.toDo}
