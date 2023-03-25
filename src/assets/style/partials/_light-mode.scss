@@ -88,6 +88,10 @@
     border: 0.1rem solid gray;
     border-radius: 100%;
     margin-right: .5rem;
+
+    &:checked {
+        background: blue;
+    }
   }
 }
 
@@ -110,4 +114,8 @@
     p {
         margin: 0 .5rem;
     }
+}
+
+.complete {
+    text-decoration: line-through;
 }

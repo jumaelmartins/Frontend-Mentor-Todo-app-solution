@@ -26,7 +26,9 @@
 [x] - Capturar os Elementos HTML com JS
     [x] - Input
     [x] - UL
+    [] - Counter
 [X] - Carregar os Items na Pagina.
+[] - Função para marca todo como completo.
 [] - Adicionar EventListenner para acionar as Funções de Adicionar e Remover Itens.
 
 ### Etapa 4

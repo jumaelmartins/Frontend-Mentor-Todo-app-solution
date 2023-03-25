@@ -8,6 +8,7 @@ export const addTodo = (toDoText) => {
   const todoObj = {
     toDo: toDoText,
     todoId: id,
+    todoComplete: false,
   };
   todoList.push(todoObj);
   setLocalStorageIten();
@@ -31,21 +32,31 @@ export const editTodo = (id, toDo) => {
 };
 
 export const loadTodo = () => {
-  const li = document.createElement("li");
   const todoListHtml = document.querySelector("#todo-list");
   todoListHtml.innerHTML = "";
   const newHtml = todoList.map(convertTodoListToHtml).join("");
-  li.innerHTML = newHtml;
-  todoListHtml.appendChild(li);
+  todoListHtml.innerHTML = newHtml;
 };
 
 const convertTodoListToHtml = (todo) => {
   return ` 
   <li id="${todo.todoId}" class="todo-list__item_light-mode">
     <label>
-      <input class="todo-list__input_light-mode" type="checkbox" />
+      <input class="todo-list__input todo-list__input_light-mode" type="checkbox" />
       ${todo.toDo}
     </label>
-    <img width="16" src="./src/assets/images/icon-cross.svg" alt="" />
+    <img src="./src/assets/images/icon-cross.svg" alt="" />
   </li>`;
 };
+
+const markTodoAsComplete = () => {
+  const checkbox = document.querySelectorAll(".todo-list__input");
+  checkbox.forEach((item) => {
+    item.addEventListener("click", (event) => {
+      const label = event.target.closest("label");
+      label.classList.toggle("complete");
+    });
+  });
+};
+
+window.addEventListener("load", (event) => markTodoAsComplete());

@@ -11,7 +11,6 @@ todoForm.addEventListener("submit", event => {
     console.log(todoText.value)
     addTodo(todoText.value)
     loadTodo()
-    console.log(todoList)
 })
 
 loadTodo()
