@@ -7,37 +7,54 @@
     <title>Vite App</title>
   </head>
   <body>
-    <section>
-      <header>
-        <h1>Todo</h1>
-        <img width="16" src="./src/assets/images/icon-moon.svg" alt="">
-      </header>
-    </section>
+    <main class="main">
+      <section class="header_light-mode">
+        <header class="header__content_light-mode">
+          <h1 class="header__logo_light-mode">Todo</h1>
+          <img
+            class="header__icon_moon"
+            src="./src/assets/images/icon-moon.svg"
+            alt=""
+          />
+        </header>
 
-    <form action="">
-      <input type="text" placeholder="Ceate a new todo"/>
-    </form>
+        <form class="form__light-mode">
+          <input
+            class="form__input_disabled_light-mode"
+            type="checkbox"
+            disabled
+            placeholder="Ceate a new todo"
+          />
+          <input
+            class="form__input_light-mode"
+            type="text"
+            placeholder="Ceate a new todo"
+          />
+        </form>
+      </section>
 
-    <section>
-      <ul>
-        <li>
-          <input type="checkbox" />
-          <label for="">Tarefa 01</label>
-          <img width="16" src="./src/assets/images/icon-cross.svg" alt="" />
-        </li>
-      </ul>
-      <div>
-        <p>1 item left</p>
-        <p>clear completed</p>
-      </div>
+      <section class="todo-list__container">
+        <ul class="todo-list__light-mode">
+          <li class="todo-list__item_light-mode">
+            <label>
+              <input class="todo-list__input_light-mode" type="checkbox" />
+              Tarefa 01
+            </label>
+            <img width="16" src="./src/assets/images/icon-cross.svg" alt="" />
+          </li>
+        </ul>
+        <div class="todo-list__footer_light-mode">
+          <p>1 item left</p>
+          <p>clear completed</p>
+        </div>
 
-      <div class="filter">
-        <p>all</p>
-        <p>active</p>
-        <p>completed</p>
-      </div>
-    </section>
-
+        <div class="todo-list_filter">
+          <p>all</p>
+          <p>active</p>
+          <p>completed</p>
+        </div>
+      </section>
+    </main>
     <script type="module" src="/src/assets/js/main.js"></script>
   </body>
 </html>
