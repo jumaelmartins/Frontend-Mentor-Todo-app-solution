@@ -20,7 +20,7 @@ export const removeTodo = (id) => {
 
   if (indexItenToRemove !== -1) todoList.splice(indexItenToRemove, 1);
   setLocalStorageIten();
-  getLocalStorageItens();
+  loadTodo();
 };
 
 export const editTodo = (id, toDo) => {
@@ -45,18 +45,17 @@ const convertTodoListToHtml = (todo) => {
       <input class="todo-list__input todo-list__input_light-mode" type="checkbox" />
       ${todo.toDo}
     </label>
-    <img src="./src/assets/images/icon-cross.svg" alt="" />
+    <img class="todo__remove" src="./src/assets/images/icon-cross.svg" alt="" />
   </li>`;
 };
 
-const markTodoAsComplete = () => {
-  const checkbox = document.querySelectorAll(".todo-list__input");
-  checkbox.forEach((item) => {
-    item.addEventListener("click", (event) => {
-      const label = event.target.closest("label");
-      label.classList.toggle("complete");
-    });
-  });
-};
+document.addEventListener("click", (event) => {
+  if (event.target.className === "todo__remove") {
+    removeTodo(event.target.closest("li").id);
+  }
 
-window.addEventListener("load", (event) => markTodoAsComplete());
+  if (event.target.className.includes("todo-list__input")) {
+    const label = event.target.closest("label");
+    label.classList.toggle("complete");
+  }
+});

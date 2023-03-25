@@ -28,7 +28,8 @@
     [x] - UL
     [] - Counter
 [X] - Carregar os Items na Pagina.
-[] - Função para marca todo como completo.
+[X] - Função para marca todo como completo.
+[x] - Função para remover todo pelo click.
 [] - Adicionar EventListenner para acionar as Funções de Adicionar e Remover Itens.
 
 ### Etapa 4
