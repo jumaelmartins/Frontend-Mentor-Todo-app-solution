@@ -1,3 +1,8 @@
+@use "./partials/footer";
+@use "./partials/form";
+@use "./partials/header";
 @use "./partials/light-mode";
+@use "./partials/dark-mode";
 @use "./partials/media-query";
 @use "./partials/base";
+@use "./partials/todo-list";

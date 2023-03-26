@@ -8,39 +8,41 @@
   </head>
   <body>
     <main class="main">
-      <section class="header_light-mode">
-        <header class="header__content_light-mode">
-          <h1 class="header__logo_light-mode">Todo</h1>
+      <section class="header header_light-mode">
+        <header class="header__content header__content_light-mode">
+          <h1 class="header__logo header__logo_light-mode">Todo</h1>
           <img
-            class="header__icon_moon"
+            class="header__icon header__icon_moon"
             src="/images/icon-moon.svg"
             alt=""
           />
         </header>
 
-        <form id="todo-form" action="post" class="form__light-mode">
-          <input
-            class="form__input_disabled_light-mode"
-            type="checkbox"
-            disabled
-            placeholder="Ceate a new todo"
-          />
-          <input
-            id="input-todo"
-            class="form__input_light-mode"
-            type="text"
-            placeholder="Ceate a new todo"
-          />
+        <form id="todo-form" action="post" class="form form__light-mode">
+          <fieldset>
+            <input
+              class="form__input_disabled form__input_disabled_light-mode"
+              type="checkbox"
+              disabled
+            />
+            <input
+              id="input-todo"
+              class="form__input form__input_light-mode"
+              type="text"
+              placeholder="Ceate a new todo..."
+            />
+          </fieldset>
         </form>
       </section>
 
       <section class="todo-list__container">
-        <ul
-        id="todo-list"
-         class="todo-list__light-mode">
-          <li class="todo-list__item_light-mode">
+        <ul id="todo-list" class="todo-list todo-list__light-mode">
+          <li class="todo-list__item todo-list__item_light-mode">
             <label>
-              <input class="todo-list__input_light-mode" type="checkbox" />
+              <input
+                class="todo-list__input todo-list__input_light-mode"
+                type="checkbox"
+              />
               Tarefa 01
             </label>
             <img width="16" src="/images/icon-cross.svg" alt="" />
@@ -51,10 +53,10 @@
           <p class="todo-list__footer__clear-items">clear completed</p>
         </div>
 
-        <div class="todo-list_filter">
-          <p>all</p>
-          <p>active</p>
-          <p>completed</p>
+        <div class="todo-list__filter">
+          <p class="todo-list__filter__item">all</p>
+          <p class="todo-list__filter__item">active</p>
+          <p class="todo-list__filter__item">completed</p>
         </div>
       </section>
     </main>

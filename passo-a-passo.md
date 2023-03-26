@@ -39,6 +39,8 @@
 ### Etapa 4
 
 [] - Fazer Estilização
+    [X] - light-mode - mobile
+    [] - dark-mode - mobile
 [] - Função para alternar entre light-mode e dark-mode
 [] - Tratar Responsividade
 [] - Revisar Codigo

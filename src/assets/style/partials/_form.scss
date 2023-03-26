@@ -1,0 +1,32 @@
+.form {
+  width: 80%;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin: 3rem auto;
+
+  fieldset {
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .form__input_disabled {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 100%;
+  }
+
+  .form__input {
+    border: none;
+    outline: none;
+    margin: 0 1rem;
+    width: 80%;
+  }
+}

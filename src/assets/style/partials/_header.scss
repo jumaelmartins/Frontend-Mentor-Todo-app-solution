@@ -1,0 +1,19 @@
+.header {
+  width: 100%;
+}
+
+.header__content {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem auto;
+
+  .header__logo {
+    letter-spacing: 1rem;
+  }
+  .header__icon_moon {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}

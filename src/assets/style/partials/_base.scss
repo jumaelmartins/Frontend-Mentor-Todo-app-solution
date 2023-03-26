@@ -13,7 +13,6 @@ html {
 
   body {
     font-size: 1.8rem;
-    background-color: gray;
   }
 }
 
@@ -25,11 +24,17 @@ a a:visited a:link a:hover {
   text-decoration: none;
   color: inherit;
 }
-
 .complete {
-  text-decoration: line-through;
-}
+    text-decoration: line-through;
+  }
 
 .hidden {
   display: none;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-items: center;
 }
