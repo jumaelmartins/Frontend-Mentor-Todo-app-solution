@@ -28,8 +28,6 @@ export const removeTodo = (id) => {
 export const editTodo = (toDo) => {
   const itenToEdit = todoList.filter((todo) => todo.todoId === toDo.todoId);
   const indexItenToEdit = todoList.indexOf(itenToEdit[0]);
-  console.log(toDo);
-  console.log(indexItenToEdit);
   todoList[indexItenToEdit] = toDo;
   setLocalStorageIten();
 };
@@ -52,3 +50,12 @@ const convertTodoListToHtml = (todo) => {
     <img class="todo__remove" src=${crossIcon} alt="" />
   </li>`;
 };
+
+
+export const removeCompletedTodo = (item) => {
+  const newTodo = todoList.filter(todo => todo.todoComplete !== item);
+  todoList = newTodo
+  setLocalStorageIten();
+  loadTodo();
+  updateCounter();
+}

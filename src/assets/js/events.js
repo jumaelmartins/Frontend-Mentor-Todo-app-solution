@@ -1,4 +1,4 @@
-import { editTodo, loadTodo, addTodo } from "./toDo";
+import { editTodo, loadTodo, addTodo, removeTodo, removeCompletedTodo} from "./toDo";
 import { updateCounter } from "./counter";
 import { setLocalStorageIten } from "./localStorage";
 
@@ -39,6 +39,7 @@ document.addEventListener("click", (event) => {
     todoItem.forEach((item) => {
       item.closest("li").classList.remove("hidden");
     });
+    updateCounter();
   }
 
   if (event.target.innerText === "active") {
@@ -48,14 +49,20 @@ document.addEventListener("click", (event) => {
         item.closest("li").classList.add("hidden");
       } else item.closest("li").classList.remove("hidden");
     });
+    updateCounter();
   }
 
   if (event.target.innerText === "completed") {
     const todoItem = document.querySelectorAll("label");
     todoItem.forEach((item) => {
-      if (!item.classList.contains("complete")) {
-        item.closest("li").classList.add("hidden");
-      } else item.closest("li").classList.remove("hidden");
+      if (item.classList.contains("complete")) {
+        item.closest("li").classList.remove("hidden");
+      } else item.closest("li").classList.add("hidden");
     });
+    updateCounter();
+  }
+
+  if (event.target.innerText === "clear completed") {
+    removeCompletedTodo("complete")
   }
 });

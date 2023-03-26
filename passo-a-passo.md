@@ -8,7 +8,7 @@
 
 [X] - Criar Repo
 [X] - Organizar Diretorios
-[x] - Criar template HTML
+[X] - Criar template HTML
 
 ### Etapa 2
 
@@ -21,21 +21,25 @@
 
 ### Etapa 3
 
-[x] - CSS Resetado
-[x] - Estilização Basica CSS
-[x] - Capturar os Elementos HTML com JS
-    [x] - Input
-    [x] - UL
-    [x] - Counter
+[X] - CSS Resetado
+[X] - Estilização Basica CSS
+[X] - Capturar os Elementos HTML com JS
+    [X] - Input
+    [X] - UL
+    [X] - Counter
 [X] - Carregar os Items na Pagina.
 [X] - Função para marca todo como completo.
-[x] - Função para remover todo pelo click.
+[X] - Função para remover todo pelo click.
 [X] - Função para atualizar o Contador de Tarefas Pendentes.
 [X] - Adicionar EventListenner para acionar as Funções de Adicionar e Remover Itens.
-[x] - Função de Atualizar o Status do Todo.
+[X] - Função de Atualizar o Status do Todo.
+[X] - Filtragem de Todo
+[X] - Remover todos Completos ao Clicar.
 
 ### Etapa 4
 
+[] - Fazer Estilização
+[] - Função para alternar entre light-mode e dark-mode
 [] - Tratar Responsividade
 [] - Revisar Codigo
 [] - Atualizar Readme
@@ -44,3 +48,4 @@
 [] - Botão para editar todo
 [] - Função de arrastar os itens.
 [] - Paginação.
+[] - Modal com validação antes de apagar itens.
