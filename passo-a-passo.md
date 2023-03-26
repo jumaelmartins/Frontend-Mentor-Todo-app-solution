@@ -30,8 +30,9 @@
 [X] - Carregar os Items na Pagina.
 [X] - Função para marca todo como completo.
 [x] - Função para remover todo pelo click.
-[] - Função para atualizar o Contador de Tarefas Pendentes
-[] - Adicionar EventListenner para acionar as Funções de Adicionar e Remover Itens.
+[X] - Função para atualizar o Contador de Tarefas Pendentes.
+[X] - Adicionar EventListenner para acionar as Funções de Adicionar e Remover Itens.
+[x] - Função de Atualizar o Status do Todo.
 
 ### Etapa 4
 

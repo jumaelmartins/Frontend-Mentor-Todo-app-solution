@@ -25,12 +25,13 @@ export const removeTodo = (id) => {
   loadTodo();
 };
 
-export const editTodo = (id, toDo) => {
-  const itenToEdit = todoList.filter((todo) => todo.todoId === id);
+export const editTodo = (toDo) => {
+  const itenToEdit = todoList.filter((todo) => todo.todoId === toDo.todoId);
   const indexItenToEdit = todoList.indexOf(itenToEdit[0]);
+  console.log(toDo);
+  console.log(indexItenToEdit);
   todoList[indexItenToEdit] = toDo;
   setLocalStorageIten();
-  getLocalStorageItens();
 };
 
 export const loadTodo = () => {
@@ -44,8 +45,8 @@ export const loadTodo = () => {
 const convertTodoListToHtml = (todo) => {
   return ` 
   <li id="${todo.todoId}" class="todo-list__item_light-mode">
-    <label>
-      <input class="todo-list__input todo-list__input_light-mode" type="checkbox" />
+    <label class="${todo.todoComplete}">
+      <input ${todo.todoComplete === "complete" ? "checked" : ""} class="todo-list__input todo-list__input_light-mode" type="checkbox" />
       ${todo.toDo}
     </label>
     <img class="todo__remove" src=${crossIcon} alt="" />
@@ -60,8 +61,19 @@ document.addEventListener("click", (event) => {
   if (event.target.className.includes("todo-list__input")) {
     const input = event.target;
     const label = event.target.closest("label");
-    if (input.checked) label.classList.add("complete");
-    else label.classList.remove("complete");
+    if (input.checked) {
+      label.classList.add("complete")
+      label.classList.remove("false")
+    } else label.classList.remove("complete");
+
+    const newTodo ={
+      toDo:  event.target.closest("label").innerText,
+      todoId:  event.target.closest("li").id,
+      todoComplete:  event.target.closest("label").className,
+    }
+
+    editTodo(newTodo)
+    setLocalStorageIten();
     updateCounter();
   }
 });
