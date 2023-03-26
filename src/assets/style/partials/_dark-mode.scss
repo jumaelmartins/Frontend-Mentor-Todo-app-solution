@@ -1,1 +1,88 @@
+@use "variables";
+body {
+  &.dark-mode {
+    color: white;
+    background-color: map-get(variables.$dark-theme, very-dark-blue);
+  }
+}
 
+.header {
+  &.dark-mode {
+    background: url(/images/bg-mobile-dark.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.form {
+  &.dark-mode {
+    background-color: map-get(
+      variables.$dark-theme,
+      very-dark-grayish-blue-alt
+    );
+    color: map-get(variables.$dark-theme, very-dark-grayish-blue);
+    .form__input_disabled {
+      &.dark-mode {
+        border: 0.1rem solid
+          map-get(variables.$dark-theme, very-dark-grayish-blue);
+      }
+    }
+
+    .form__input {
+      &.dark-mode {
+        background: map-get(variables.$dark-theme, very-dark-grayish-blue-alt);
+        color: map-get(variables.$dark-theme, light-grayish-blue);
+      }
+      ::placeholder {
+        color: map-get(variables.$dark-theme, very-dark-grayish-blue);
+      }
+    }
+  }
+}
+.todo-list__container {
+  color: map-get(variables.$dark-theme, dark-grayish-blue);
+  background-color: map-get(variables.$dark-theme, very-dark-grayish-blue-alt);
+  box-shadow: 0 0.5rem 2rem 0.2rem
+    map-get(variables.$dark-theme, very-dark-desaturated-blue);
+}
+
+.todo-list__item {
+  &.dark-mode {
+    border-bottom: 0.1rem solid
+      map-get(variables.$dark-theme, very-dark-grayish-blue);
+
+    label {
+      color: map-get(variables.$dark-theme, light-grayish-blue);
+    }
+
+    input[type="checkbox"] {
+      border: 0.1rem solid
+        map-get(variables.$dark-theme, very-dark-grayish-blue);
+      outline: none;
+
+      &:checked {
+        background: linear-gradient(
+          to right,
+          map-get(variables.$p-colors, check-bg-1),
+          map-get(variables.$p-colors, check-bg-2)
+        );
+      }
+    }
+  }
+}
+.todo-list__filter {
+  &.dark-mode {
+    background-color: map-get(
+      variables.$dark-theme,
+      very-dark-grayish-blue-alt
+    );
+    box-shadow: 0 0.5rem 2rem 0.2rem
+      map-get(variables.$dark-theme, very-dark-desaturated-blue);
+    color: map-get(variables.$dark-theme, dark-grayish-blue);
+  }
+}
+
+.complete.dark-mode {
+  color: red;
+  // color: map-get(variables.$dark-theme, very-dark-grayish-blue);
+}

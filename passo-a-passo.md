@@ -38,16 +38,16 @@
 
 ### Etapa 4
 
-[] - Fazer Estilização
+[X] - Fazer Estilização
     [X] - light-mode - mobile
-    [] - dark-mode - mobile
-[] - Função para alternar entre light-mode e dark-mode
+    [X] - dark-mode - mobile
 [] - Tratar Responsividade
+[] - Função para alternar entre light-mode e dark-mode
 [] - Revisar Codigo
 [] - Atualizar Readme
 
 ### Extra
-[] - Botão para editar todo
 [] - Função de arrastar os itens.
+[] - Botão para editar todo
 [] - Paginação.
 [] - Modal com validação antes de apagar itens.

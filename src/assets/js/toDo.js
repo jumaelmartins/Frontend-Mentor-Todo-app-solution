@@ -42,9 +42,9 @@ export const loadTodo = () => {
 
 const convertTodoListToHtml = (todo) => {
   return ` 
-  <li id="${todo.todoId}" class="todo-list__item todo-list__item_light-mode">
-    <label class="${todo.todoComplete}">
-      <input ${todo.todoComplete === "complete" ? "checked" : ""} class="todo-list__input todo-list__input_light-mode" type="checkbox" />
+  <li id="${todo.todoId}" class="todo-list__item dark-mode">
+    <label class="${todo.todoComplete} dark-mode">
+      <input ${todo.todoComplete === "complete" ? "checked" : ""} class="todo-list__input dark-mode" type="checkbox" />
       ${todo.toDo}
     </label>
     <img class="todo__remove" src=${crossIcon} alt="" />

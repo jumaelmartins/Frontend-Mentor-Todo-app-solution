@@ -1,6 +1,7 @@
 import { editTodo, loadTodo, addTodo, removeTodo, removeCompletedTodo} from "./toDo";
 import { updateCounter } from "./counter";
 import { setLocalStorageIten } from "./localStorage";
+import { toggleTheme } from "./toggle-theme";
 
 const todoText = document.querySelector("#input-todo");
 const todoForm = document.querySelector("#todo-form");
@@ -65,4 +66,6 @@ document.addEventListener("click", (event) => {
   if (event.target.innerText === "clear completed") {
     removeCompletedTodo("complete")
   }
+
+  // toggleTheme();
 });

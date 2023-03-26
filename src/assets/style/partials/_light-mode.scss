@@ -1,59 +1,76 @@
 @use "variables";
+
 body {
-  color: white;
-  background-color: map-get(variables.$light-theme, very-light-gray);
-}
-
-.header_light-mode {
-  background: url(/images/bg-mobile-light.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.form__light-mode {
-  background-color: white;
-  color: map-get(variables.$light-theme, very-light-grayish);
-  .form__input_disabled_light-mode {
-    border: 0.1rem solid map-get(variables.$light-theme, very-light-grayish);
-  }
-
-  .form__input_light-mode{
-    color: map-get(variables.$light-theme, dark-grayish-blue-alt);
-  }
-  ::placeholder {
-    color: map-get(variables.$light-theme, dark-grayish-blue);
+  &.light-mode {
+    color: white;
+    background-color: map-get(variables.$light-theme, very-light-gray);
   }
 }
 
+.header {
+  &.light-mode {
+    background: url(/images/bg-mobile-light.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.form {
+  &.light-mode {
+    background-color: white;
+    color: map-get(variables.$light-theme, very-light-grayish);
+    .form__input_disabled {
+      &.light-mode {
+        border: 0.1rem solid map-get(variables.$light-theme, very-light-grayish);
+      }
+    }
+
+    .form__input {
+      &.light-mode {
+        color: map-get(variables.$light-theme, dark-grayish-blue-alt);
+      }
+      ::placeholder {
+        color: map-get(variables.$light-theme, dark-grayish-blue);
+      }
+    }
+  }
+}
 .todo-list__container {
   color: map-get(variables.$light-theme, dark-grayish-blue);
   background-color: white;
-  box-shadow: 0 .5rem 2rem .2rem map-get(variables.$light-theme, very-light-grayish);
+  box-shadow: 0 0.5rem 2rem 0.2rem
+    map-get(variables.$light-theme, very-light-grayish);
 }
 
-.todo-list__item_light-mode {
-  border-bottom: 0.1rem solid
-    map-get(variables.$light-theme, very-light-grayish);
+.todo-list__item {
+  &.light-mode {
+    border-bottom: 0.1rem solid
+      map-get(variables.$light-theme, very-light-grayish);
 
-  label {
-    color: map-get(variables.$light-theme, dark-grayish-blue-alt);
-  }
+    label {
+      color: map-get(variables.$light-theme, dark-grayish-blue-alt);
+    }
 
-  input[type="checkbox"] {
-    border: 0.1rem solid map-get(variables.$light-theme, very-light-grayish);
-    color: white;
-    outline: none;
-    
-    &:checked {
-      background: linear-gradient(
-        to right, map-get(variables.$p-colors, check-bg-1),
-        map-get(variables.$p-colors, check-bg-2)
+    input[type="checkbox"] {
+      border: 0.1rem solid map-get(variables.$light-theme, very-light-grayish);
+      color: white;
+      outline: none;
+
+      &:checked {
+        background: linear-gradient(
+          to right,
+          map-get(variables.$p-colors, check-bg-1),
+          map-get(variables.$p-colors, check-bg-2)
         );
       }
+    }
   }
 }
 
 .todo-list__filter {
-  background-color: white;
-  box-shadow: 0 .5rem 2rem .2rem map-get(variables.$light-theme, very-light-grayish);
+  &.light-mode {
+    background-color: white;
+    box-shadow: 0 0.5rem 2rem 0.2rem
+      map-get(variables.$light-theme, very-light-grayish);
+  }
 }
