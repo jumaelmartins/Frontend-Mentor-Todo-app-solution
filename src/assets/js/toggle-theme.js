@@ -39,7 +39,4 @@ export const toggleTheme = () => {
     element.classList.toggle("light-mode")
     element.classList.toggle("dark-mode")
   })
-
 };
-
-toggleTheme();

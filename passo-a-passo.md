@@ -41,7 +41,7 @@
 [X] - Fazer Estilização
     [X] - light-mode - mobile
     [X] - dark-mode - mobile
-[] - Tratar Responsividade
+[X] - Tratar Responsividade
 [] - Função para alternar entre light-mode e dark-mode
 [] - Revisar Codigo
 [] - Atualizar Readme

@@ -1,0 +1,64 @@
+@media screen and (min-width: 375px) {
+  .header {
+    &.dark-mode {
+      background: url(/images/bg-desktop-dark.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &.light-mode {
+      background: url(/images/bg-desktop-light.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .header__content {
+    width: 80%;
+  }
+  .form {
+    width: 80%;
+  }
+  .todo-list__container {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header__content {
+    width: 50%;
+  }
+  .form {
+    width: 50%;
+  }
+  .todo-list__container {
+    width: 50%;
+  }
+
+  .todo-list__filter {
+    width: 50%;
+    bottom: 0;
+    left: 25%;
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    p {
+      margin: 0 0.5rem;
+    }
+  }
+
+  .todo-list__filter {
+    &.light-mode {
+        box-shadow: none;
+    }
+  }
+
+  .todo-list__filter {
+    &.dark-mode {
+        box-shadow: none;
+    }
+  }
+
+}

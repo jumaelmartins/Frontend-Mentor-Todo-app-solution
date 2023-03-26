@@ -40,10 +40,15 @@ body {
   }
 }
 .todo-list__container {
-  color: map-get(variables.$dark-theme, dark-grayish-blue);
-  background-color: map-get(variables.$dark-theme, very-dark-grayish-blue-alt);
-  box-shadow: 0 0.5rem 2rem 0.2rem
-    map-get(variables.$dark-theme, very-dark-desaturated-blue);
+  &dark-mode {
+    color: map-get(variables.$dark-theme, dark-grayish-blue);
+    background-color: map-get(
+      variables.$dark-theme,
+      very-dark-grayish-blue-alt
+    );
+    box-shadow: 0 0.5rem 2rem 0.2rem
+      map-get(variables.$dark-theme, very-dark-desaturated-blue);
+  }
 }
 
 .todo-list__item {
@@ -83,6 +88,5 @@ body {
 }
 
 .complete.dark-mode {
-  color: red;
-  // color: map-get(variables.$dark-theme, very-dark-grayish-blue);
+  color: map-get(variables.$dark-theme, very-dark-grayish-blue);
 }
