@@ -41,5 +41,6 @@
 [] - Atualizar Readme
 
 ### Extra
+[] - Botão para editar todo
 [] - Função de arrastar os itens.
 [] - Paginação.

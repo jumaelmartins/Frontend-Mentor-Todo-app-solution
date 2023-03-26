@@ -52,28 +52,3 @@ const convertTodoListToHtml = (todo) => {
     <img class="todo__remove" src=${crossIcon} alt="" />
   </li>`;
 };
-
-document.addEventListener("click", (event) => {
-  if (event.target.className === "todo__remove") {
-    removeTodo(event.target.closest("li").id);
-  }
-
-  if (event.target.className.includes("todo-list__input")) {
-    const input = event.target;
-    const label = event.target.closest("label");
-    if (input.checked) {
-      label.classList.add("complete")
-      label.classList.remove("false")
-    } else label.classList.remove("complete");
-
-    const newTodo ={
-      toDo:  event.target.closest("label").innerText,
-      todoId:  event.target.closest("li").id,
-      todoComplete:  event.target.closest("label").className,
-    }
-
-    editTodo(newTodo)
-    setLocalStorageIten();
-    updateCounter();
-  }
-});

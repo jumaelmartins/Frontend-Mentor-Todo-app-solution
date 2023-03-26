@@ -1,20 +1,6 @@
 import "../style/main.scss";
-import { addTodo, loadTodo } from "./toDo";
-import "./counter"
+import { loadTodo } from "./toDo";
+import "./counter";
+import "./events";
 
-const todoText = document.querySelector("#input-todo");
-const todoForm = document.querySelector("#todo-form")
-
-
-todoForm.addEventListener("submit", event => {
-    event.preventDefault()
-    addTodo(todoText.value)
-    loadTodo()
-})
-
-loadTodo()
-
-
-
-
-
+loadTodo();
