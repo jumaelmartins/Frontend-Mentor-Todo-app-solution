@@ -36,10 +36,12 @@ body {
   }
 }
 .todo-list__container {
-  color: map-get(variables.$light-theme, dark-grayish-blue);
-  background-color: white;
-  box-shadow: 0 0.5rem 2rem 0.2rem
-    map-get(variables.$light-theme, very-light-grayish);
+  &.light-mode {
+    color: map-get(variables.$light-theme, dark-grayish-blue);
+    background-color: white;
+    box-shadow: 0 0.5rem 2rem 0.2rem
+      map-get(variables.$light-theme, very-light-grayish);
+  }
 }
 
 .todo-list__item {

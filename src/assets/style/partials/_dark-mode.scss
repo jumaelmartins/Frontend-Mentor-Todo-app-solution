@@ -39,8 +39,9 @@ body {
     }
   }
 }
+
 .todo-list__container {
-  &dark-mode {
+  &.dark-mode {
     color: map-get(variables.$dark-theme, dark-grayish-blue);
     background-color: map-get(
       variables.$dark-theme,
@@ -55,22 +56,22 @@ body {
   &.dark-mode {
     border-bottom: 0.1rem solid
       map-get(variables.$dark-theme, very-dark-grayish-blue);
-
+    background: map-get(variables.$dark-theme, very-dark-grayish-blue-alt);
     label {
       color: map-get(variables.$dark-theme, light-grayish-blue);
-    }
 
-    input[type="checkbox"] {
-      border: 0.1rem solid
-        map-get(variables.$dark-theme, very-dark-grayish-blue);
-      outline: none;
+      input[type="checkbox"] {
+        border: 0.1rem solid
+          map-get(variables.$dark-theme, very-dark-grayish-blue);
+        outline: none;
 
-      &:checked {
-        background: linear-gradient(
-          to right,
-          map-get(variables.$p-colors, check-bg-1),
-          map-get(variables.$p-colors, check-bg-2)
-        );
+        &:checked {
+          background: linear-gradient(
+            to right,
+            map-get(variables.$p-colors, check-bg-1),
+            map-get(variables.$p-colors, check-bg-2)
+          );
+        }
       }
     }
   }
@@ -89,4 +90,13 @@ body {
 
 .complete.dark-mode {
   color: map-get(variables.$dark-theme, very-dark-grayish-blue);
+}
+
+.todo-list__footer {
+  &.dark-mode {
+    background-color: map-get(
+      variables.$dark-theme,
+      very-dark-grayish-blue-alt
+    );
+  }
 }

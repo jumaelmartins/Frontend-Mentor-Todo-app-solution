@@ -7,8 +7,17 @@ const todoText = document.querySelector("#input-todo");
 const todoForm = document.querySelector("#todo-form");
 
 todoForm.addEventListener("submit", (event) => {
+  let theme;
+
+    if (event.target.classList.contains("light-mode")) {
+      theme = "light-mode";
+    } else if (event.target.classList.contains("dark-mode")) {
+      theme = "dark-mode";
+    }
+
   event.preventDefault();
-  addTodo(todoText.value);
+  addTodo(todoText.value, theme);
+  setLocalStorageIten();
   loadTodo();
 });
 
@@ -25,10 +34,19 @@ document.addEventListener("click", (event) => {
       label.classList.remove("false");
     } else label.classList.remove("complete");
 
+    let theme;
+
+    if (event.target.closest("li").classList.contains("light-mode")) {
+      theme = "light-mode";
+    } else if (event.target.closest("li").classList.contains("dark-mode")) {
+      theme = "dark-mode";
+    }
+
     const newTodo = {
       toDo: event.target.closest("label").innerText,
       todoId: event.target.closest("li").id,
       todoComplete: event.target.closest("label").className,
+      mode: theme
     };
 
     editTodo(newTodo);
@@ -67,5 +85,8 @@ document.addEventListener("click", (event) => {
     removeCompletedTodo("complete")
   }
 
-  // toggleTheme();
+  if (event.target.classList.contains("header__icon")) {
+    toggleTheme();
+  }
+
 });

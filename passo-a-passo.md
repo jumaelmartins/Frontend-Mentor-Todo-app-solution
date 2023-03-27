@@ -42,7 +42,8 @@
     [X] - light-mode - mobile
     [X] - dark-mode - mobile
 [X] - Tratar Responsividade
-[] - Função para alternar entre light-mode e dark-mode
+[X] - Função para alternar entre light-mode e dark-mode
+[] - Corrigir Bug, ao carregar a pagina tarefas começar no dark mode.. (seta o modo dinamicamente nesta parte igual no resto)
 [] - Revisar Codigo
 [] - Atualizar Readme
 
