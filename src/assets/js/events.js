@@ -1,27 +1,29 @@
-import { editTodo, loadTodo, addTodo, removeTodo, removeCompletedTodo} from "./toDo";
+import {
+  editTodo,
+  loadTodo,
+  addTodo,
+  removeTodo,
+  removeCompletedTodo,
+} from "./toDo";
 import { updateCounter } from "./counter";
 import { setLocalStorageIten } from "./localStorage";
-import { toggleTheme } from "./toggle-theme";
+import { toggleTheme, setdarkMode, getTheme } from "./toggle-theme";
 
 const todoText = document.querySelector("#input-todo");
 const todoForm = document.querySelector("#todo-form");
 
 todoForm.addEventListener("submit", (event) => {
-  let theme;
-
-    if (event.target.classList.contains("light-mode")) {
-      theme = "light-mode";
-    } else if (event.target.classList.contains("dark-mode")) {
-      theme = "dark-mode";
-    }
-
+  let theme = getTheme();
   event.preventDefault();
   addTodo(todoText.value, theme);
   setLocalStorageIten();
   loadTodo();
+  setdarkMode(theme);
 });
 
 document.addEventListener("click", (event) => {
+  let theme = getTheme();
+
   if (event.target.className === "todo__remove") {
     removeTodo(event.target.closest("li").id);
   }
@@ -34,19 +36,13 @@ document.addEventListener("click", (event) => {
       label.classList.remove("false");
     } else label.classList.remove("complete");
 
-    let theme;
-
-    if (event.target.closest("li").classList.contains("light-mode")) {
-      theme = "light-mode";
-    } else if (event.target.closest("li").classList.contains("dark-mode")) {
-      theme = "dark-mode";
-    }
+    // let theme = getTheme();
 
     const newTodo = {
       toDo: event.target.closest("label").innerText,
       todoId: event.target.closest("li").id,
       todoComplete: event.target.closest("label").className,
-      mode: theme
+      mode: theme,
     };
 
     editTodo(newTodo);
@@ -82,11 +78,10 @@ document.addEventListener("click", (event) => {
   }
 
   if (event.target.innerText === "clear completed") {
-    removeCompletedTodo("complete")
+    removeCompletedTodo("complete");
   }
 
   if (event.target.classList.contains("header__icon")) {
     toggleTheme();
   }
-
 });

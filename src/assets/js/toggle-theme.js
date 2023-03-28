@@ -67,7 +67,42 @@ export const toggleTheme = () => {
     };
     editTodo(newTodo);
     setLocalStorageIten();
-    loadTodo();
   })
-
 };
+
+
+
+
+export const setdarkMode = (theme) => {
+  const li = document.querySelectorAll("li");
+  const label = document.querySelectorAll("label");
+  const input = document.querySelectorAll(".todo-list__input");
+
+  if (theme === "dark-mode") {
+    li.forEach((item) => {
+      item.classList.remove("light-mode");
+      item.classList.add("dark-mode");
+    });
+
+    label.forEach((item) => {
+      item.classList.remove("light-mode");
+      item.classList.add("dark-mode");
+    });
+    input.forEach((item) => {
+      item.classList.remove("light-mode");
+      item.classList.add("dark-mode");
+    });
+  }
+}
+
+
+export const getTheme = () => {
+  const form = document.querySelector("form")
+  let theme;
+
+  if (form.classList.contains("light-mode")) {
+    return theme = "light-mode";
+  } else if (form.classList.contains("dark-mode")) {
+    return theme = "dark-mode";
+  }
+}

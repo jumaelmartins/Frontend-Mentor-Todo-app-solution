@@ -1,8 +1,6 @@
 # Todo List
 
-
 ## Passo a Passo
-
 
 ### Etapa 1
 
@@ -18,15 +16,14 @@
 [X] - Função para adicionar Todo no Local Storage
 [X] - Função para carregar Todo do Local Storage
 
-
 ### Etapa 3
 
 [X] - CSS Resetado
 [X] - Estilização Basica CSS
 [X] - Capturar os Elementos HTML com JS
-    [X] - Input
-    [X] - UL
-    [X] - Counter
+[X] - Input
+[X] - UL
+[X] - Counter
 [X] - Carregar os Items na Pagina.
 [X] - Função para marca todo como completo.
 [X] - Função para remover todo pelo click.
@@ -39,16 +36,18 @@
 ### Etapa 4
 
 [X] - Fazer Estilização
-    [X] - light-mode - mobile
-    [X] - dark-mode - mobile
+[X] - light-mode - mobile
+[X] - dark-mode - mobile
 [X] - Tratar Responsividade
 [X] - Função para alternar entre light-mode e dark-mode
-[] - Corrigir Bug, ao carregar a pagina tarefas começar no dark mode.. (seta o modo dinamicamente nesta parte igual no resto)
+[X] - Corrigir Bug, ao carregar a pagina tarefas começar no dark mode.. (seta o modo dinamicamente nesta parte igual no resto)
 [] - Revisar Codigo
 [] - Atualizar Readme
 
 ### Extra
+
 [] - Função de arrastar os itens.
 [] - Botão para editar todo
 [] - Paginação.
 [] - Modal com validação antes de apagar itens.
+[] - Validação no form.
