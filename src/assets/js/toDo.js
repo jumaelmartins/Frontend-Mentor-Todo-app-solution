@@ -55,6 +55,9 @@ export const loadTodo = () => {
   label.forEach((item) => {
     item.classList.add("light-mode");
     item.classList.remove("dark-mode");
+    if (item.classList.contains("complete")) {
+      console.log(item.firstElementChild.checked = true);
+    }
   });
   input.forEach((item) => {
     item.classList.add("light-mode");

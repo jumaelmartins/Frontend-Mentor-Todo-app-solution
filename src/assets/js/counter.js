@@ -10,7 +10,8 @@ export const updateCounter = () => {
   hiddenTodo = hiddenTodo.length;
   totalTodo = totalTodo.length;
   completeTodo = completeTodo.length;
-  const todoLeft = totalTodo - (completeTodo + hiddenTodo);
+
+  const todoLeft = totalTodo - completeTodo;
 
   counter.innerHTML = `
     <p class="todo-list__footer__counter">${todoLeft} item left</p>

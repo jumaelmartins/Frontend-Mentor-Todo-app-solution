@@ -13,32 +13,11 @@ const todoText = document.querySelector("#input-todo");
 const todoForm = document.querySelector("#todo-form");
 const filterItem = document.querySelectorAll(".todo-list__filter__item");
 
-// document.addEventListener("submit", (event) => {
-//   if (event.target.className === "todo-list__form__edit") {
-//     let theme = getTheme();
-//     event.preventDefault();
-
-//     const inputEdit = document.querySelector(".todo-list__input__edit");
-
-//     const newTodo = {
-//       toDo: inputEdit.value,
-//       todoId: inputEdit.closest("li").id,
-//       todoComplete: inputEdit.parentNode.previousElementSibling.className,
-//       mode: theme,
-//     };
-
-//     editTodo(newTodo);
-//     setLocalStorageIten();
-//     loadTodo();
-//     updateCounter();
-//   }
-// });
-
 todoForm.addEventListener("submit", (event) => {
   let theme = getTheme();
   event.preventDefault();
 
-  if (!todoText.value || todoText.value.lenght < 5) {
+  if (!todoText.value || todoText.value.length < 5) {
     todoText.placeholder = "Digite no minimo 5 caracteres";
   } else {
     todoText.placeholder = "Create a new todo";
@@ -71,17 +50,21 @@ document.addEventListener("click", (event) => {
     formEdit.addEventListener("submit", (event) => {
       event.preventDefault();
 
-      const newTodo = {
-        toDo: inputEdit.value,
-        todoId: inputEdit.closest("li").id,
-        todoComplete: inputEdit.parentNode.previousElementSibling.className,
-        mode: theme,
-      };
+      if (!inputEdit.value || inputEdit.value.length < 5) {
+        // inputEdit.placeholder = "Digite no minimo 5 caracteres";
+      } else {
+        const newTodo = {
+          toDo: inputEdit.value,
+          todoId: inputEdit.closest("li").id,
+          todoComplete: inputEdit.parentNode.previousElementSibling.className,
+          mode: theme,
+        };
 
-      editTodo(newTodo);
-      setLocalStorageIten();
-      loadTodo();
-      updateCounter();
+        editTodo(newTodo);
+        setLocalStorageIten();
+        loadTodo();
+        setdarkMode(theme);
+      }
     });
   }
 
@@ -93,8 +76,6 @@ document.addEventListener("click", (event) => {
       label.classList.add("complete");
       label.classList.remove("false");
     } else label.classList.remove("complete");
-
-    // let theme = getTheme();
 
     const newTodo = {
       toDo: p.innerText,
@@ -122,12 +103,16 @@ document.addEventListener("click", (event) => {
     event.target.classList.add("selected");
 
     const todoItem = document.querySelectorAll("label");
+
     todoItem.forEach((item) => {
       if (item.classList.contains("complete")) {
         item.closest("li").classList.add("hidden");
-      } else item.closest("li").classList.remove("hidden");
+        console.log(item);
+      } else {
+        item.closest("li").classList.remove("hidden");
+      }
+      updateCounter();
     });
-    updateCounter();
   }
 
   if (event.target.innerText === "completed") {
@@ -135,6 +120,7 @@ document.addEventListener("click", (event) => {
     event.target.classList.add("selected");
 
     const todoItem = document.querySelectorAll("label");
+    
     todoItem.forEach((item) => {
       if (item.classList.contains("complete")) {
         item.closest("li").classList.remove("hidden");
