@@ -83,5 +83,10 @@ document.addEventListener("click", (event) => {
 
   if (event.target.classList.contains("header__icon")) {
     toggleTheme();
+    if (theme !== "light-mode") {
+      event.target.src = "/images/icon-moon.svg"
+    } else {
+      event.target.src = "/images/icon-sun.svg"
+    }
   }
 });

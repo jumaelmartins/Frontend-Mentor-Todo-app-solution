@@ -61,12 +61,17 @@ export const loadTodo = () => {
   });
   setLocalStorageIten();
   updateCounter();
+  $(function () {
+    $("#todo-list").sortable({
+      handle: ".handle",
+    });
+  });
 };
 
 const convertTodoListToHtml = (todo) => {
-  return ` 
+  return `
   <li id="${todo.todoId}" class="todo-list__item ${todo.mode}">
-    <label class="${todo.todoComplete} ${todo.mode}">
+    <label class="${todo.todoComplete} ${todo.mode} handle">
       <input ${
         todo.todoComplete === "complete" ? "checked" : ""
       } class="todo-list__input ${todo.mode}" type="checkbox" />

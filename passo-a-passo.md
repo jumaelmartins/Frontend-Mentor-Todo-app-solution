@@ -46,7 +46,7 @@
 
 ### Extra
 
-[] - Função de arrastar os itens.
+[x] - Função de arrastar os itens.
 [] - Botão para editar todo
 [] - Paginação.
 [] - Modal com validação antes de apagar itens.

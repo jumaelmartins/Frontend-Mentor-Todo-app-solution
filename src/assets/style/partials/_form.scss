@@ -27,6 +27,16 @@
     border: none;
     outline: none;
     margin: 0 1rem;
-    width: 80%;
+    width: 100%;
+  }
+
+  button {
+    background-image: url(/public/images/send-icon.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1.6rem;
+    height: 1.6rem;
+    border: none;
+    background-color: transparent;
   }
 }

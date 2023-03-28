@@ -42,6 +42,7 @@ body {
 
 .todo-list__container {
   &.dark-mode {
+    border-radius: .5rem;
     color: map-get(variables.$dark-theme, dark-grayish-blue);
     background-color: map-get(
       variables.$dark-theme,

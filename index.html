@@ -5,7 +5,13 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
     <script type="module" src="/src/assets/js/main.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.0/themes/smoothness/jquery-ui.css"
+    />
   </head>
   <body class="light-mode">
     <main class="main">
@@ -29,9 +35,11 @@
             <input
               id="input-todo"
               class="form__input light-mode"
-              type="text"
+              type="search"
               placeholder="Create a new todo..."
             />
+            <button type="submit">
+            </button>
           </fieldset>
         </form>
       </section>
@@ -40,10 +48,7 @@
         <ul id="todo-list" class="todo-list light-mode">
           <li class="todo-list__item light-mode">
             <label class="light-mode">
-              <input
-                class="todo-list__input light-mode"
-                type="checkbox"
-              />
+              <input class="todo-list__input light-mode" type="checkbox" />
               Tarefa 01
             </label>
             <img width="16" src="/images/icon-cross.svg" alt="" />

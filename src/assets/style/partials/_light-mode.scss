@@ -37,6 +37,7 @@ body {
 }
 .todo-list__container {
   &.light-mode {
+    border-radius: .5rem;
     color: map-get(variables.$light-theme, dark-grayish-blue);
     background-color: white;
     box-shadow: 0 0.5rem 2rem 0.2rem
