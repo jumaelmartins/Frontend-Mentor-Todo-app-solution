@@ -41,13 +41,17 @@
 [X] - Tratar Responsividade
 [X] - Função para alternar entre light-mode e dark-mode
 [X] - Corrigir Bug, ao carregar a pagina tarefas começar no dark mode.. (seta o modo dinamicamente nesta parte igual no resto)
+[X] - Hover States
 [] - Revisar Codigo
 [] - Atualizar Readme
 
 ### Extra
 
-[x] - Função de arrastar os itens.
+[X] - Função de arrastar os itens.
+[X] - Botão para Editar todo.
+[X] - Validação no form.
+[] - Atualizar lista - Apos Drag and Drop
+[] - Corrigir função drag and drop no mobile
 [] - Botão para editar todo
 [] - Paginação.
 [] - Modal com validação antes de apagar itens.
-[] - Validação no form.

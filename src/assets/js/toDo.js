@@ -2,6 +2,7 @@ import { setLocalStorageIten, getLocalStorageItens } from "./localStorage";
 import { v4 as uuidv4 } from "uuid";
 import { updateCounter } from "./counter";
 import crossIcon from "/images/icon-cross.svg";
+import editIcon from "/images/edit-icon.svg";
 import { getTheme, setdarkMode } from "./toggle-theme";
 export let todoList = getLocalStorageItens();
 
@@ -59,13 +60,14 @@ export const loadTodo = () => {
     item.classList.add("light-mode");
     item.classList.remove("dark-mode");
   });
-  setLocalStorageIten();
-  updateCounter();
   $(function () {
     $("#todo-list").sortable({
       handle: ".handle",
+      touchAction: 'none'
     });
   });
+  setLocalStorageIten();
+  updateCounter();
 };
 
 const convertTodoListToHtml = (todo) => {
@@ -75,9 +77,15 @@ const convertTodoListToHtml = (todo) => {
       <input ${
         todo.todoComplete === "complete" ? "checked" : ""
       } class="todo-list__input ${todo.mode}" type="checkbox" />
-      ${todo.toDo}
-    </label>
-    <img class="todo__remove" src=${crossIcon} alt="" />
+      <p>${todo.toDo}</p>
+      </label>
+      <form class="hidden todo-list__form__edit">
+      <input class="todo-list__input__edit" type="search">
+      </form>
+    <div> 
+    <img class="todo__edit" src=${editIcon} alt="edit icon" />
+    <img class="todo__remove" src=${crossIcon} alt="remoce icon" />
+    </div>
   </li>`;
 };
 

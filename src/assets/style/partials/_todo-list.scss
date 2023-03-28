@@ -17,21 +17,39 @@
   justify-content: space-between;
   padding: 0 1.5rem;
   ::before {
-    color: white;
     left: 1.9rem;
     position: absolute;
     content: "\2714";
     font-size: 1rem;
+    color: white;
   }
+
+  div {
+    display: flex;
+  }
+
   img {
     width: 1.2rem;
     height: 1.2rem;
+    margin: 0 0 0 1rem;
   }
-
   label {
     display: flex;
     align-items: center;
-    cursor: pointer;
+    cursor: grab;
+    max-width: 100%;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  .todo-list__input__edit {
+    color: inherit;
+    outline: none;
+    border: none;
+    width: 100%;
+    background-color: transparent;
   }
 
   input[type="checkbox"] {
@@ -41,17 +59,23 @@
     width: 1.6rem;
     height: 1.6rem;
     border-radius: 100%;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
     cursor: pointer;
   }
 }
-
 
 .todo-list__footer {
   display: flex;
   justify-content: space-between;
   padding: 1.5rem;
+  height: 5rem;
+  align-items: center;
   cursor: pointer;
+  p {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+  }
 }
 
 .todo-list__filter {
@@ -59,11 +83,16 @@
   position: absolute;
   bottom: -7rem;
   display: flex;
+  height: 5rem;
+  align-items: center;
   justify-content: center;
   padding: 1.5rem;
   border-radius: 0.5rem;
   cursor: pointer;
   p {
     margin: 0 0.5rem;
+    display: flex;
+    align-items: center;
+    height: 5rem;
   }
 }

@@ -38,3 +38,10 @@ a a:visited a:link a:hover {
   flex-direction: column;
   justify-items: center;
 }
+img {
+  cursor: pointer;
+}
+
+.selected {
+  color: map-get(variables.$p-colors, bright-blue);
+}
