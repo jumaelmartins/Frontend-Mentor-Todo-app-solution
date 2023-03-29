@@ -1,99 +1,99 @@
-# Frontend Mentor - Todo app
+# Frontend Mentor TODO List
 
-![Design preview for the Todo app coding challenge](./public/design/desktop-preview.jpg)
+![GitHub repo size](https://img.shields.io/github/repo-size/https://github.com/jumaelmartins/Frontend-Mentor-Todo-app-solution?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/https://github.com/jumaelmartins/Frontend-Mentor-Todo-app-solution?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/https://github.com/jumaelmartins/Frontend-Mentor-Todo-app-solution?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/https://github.com/jumaelmartins/Frontend-Mentor-Todo-app-solution?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/https://github.com/jumaelmartins/Frontend-Mentor-Todo-app-solution?style=for-the-badge)
 
-## Welcome! 👋
+<img src="screenshot-desktop.png" alt="screenshot versão desktop">
+<img src="screenshot-mobile.png" alt="screenshot versão mobile">
 
-Thanks for checking out this front-end coding challenge.
+Frontend Mentor TODO List App, crie, atualize, complete e gerencie suas tarefas com essa ferramenta. Desafio feito usando como referencia o Design do Frontend mentor:
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+### Funcionalidades Implementadas;
 
-**To do this challenge, you need a good understanding of HTML, CSS and JavaScript.**
+- [X] Layout responsivo para todos os tipos de tela
+- [X] Efeitos de hover para elementos ativos na pagina
+- [X] Adicionar Novas Tarefas
+- [X] Marcar tarefas como concluidas
+- [X] Deletar tarefas da lista de tarefas
+- [X] Filtrar tarefas Todas/Ativas/Tarefas Concluidas
+- [X] Limpar todas as tarefas concluidas
+- [X] Alternar entre tema claro e escuro
+- [X] **Bonus**: Arrastar e Soltar tarefa para reordenar a lista ** está funcionando apenas no desktop.
 
-## The challenge
+### Ajustes e melhorias
 
-Your challenge is to build out this todo app and get it looking as close to the design as possible.
+O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+- [X] Validação no Form, criar tarefas com no minimo 5 caracteres.
+- [X] Botão para editar tarefas.
+- [] Adicionar Opção de inserir data para a tarefa.
+- [] Modal com validação antes de apagar itens.
+- [] Atualizar lista - Apos Drag and Drop
+- [] Corrigir função drag and drop no mobile
+- [] Paginação exibir no maximo 07 tarefas por pagina.
 
-Your users should be able to:
+## 💻 Pré-requisitos
 
-- View the optimal layout for the app depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Add new todos to the list
-- Mark todos as complete
-- Delete todos from the list
-- Filter by all/active/complete todos
-- Clear all completed todos
-- Toggle light and dark mode
-- **Bonus**: Drag and drop to reorder items on the list
+Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+* Você instalou a versão mais recente de `<nodejs 18v lts ou superior>
 
-## Where to find everything
+## 🚀 Instalando <Frontend_Mentor_TODO_List>
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+Para instalar o <Frontend_Mentor_TODO_List>, siga estas etapas:
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+Windows:
+```
+digitar no terminal para baixar o repositorio
+<git clone https://github.com/jumaelmartins/Frontend-Mentor-Todo-app-solution.git>
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+ao abrir a pasta do repositorio utilizar o comando abaixo para instalar as dependencias
+<npm i>
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+```
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+## ☕ Usando <Frontend_Mentor_TODO_List>
 
-## Building your project
+Para usar <Frontend_Mentor_TODO_List>, siga estas etapas:
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+com o projeto já instalado rodar o comando abaixo no terminal para inicializar o servidor local.
+```
+<npm run dev>
+```
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
 
-## Deploying your project
+## Links
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+- Repositorio URL: [https://github.com/jumaelmartins/Frontend-Mentor-Todo-app-solution](https://github.com/jumaelmartins/Frontend-Mentor-Todo-app-solution)
+- Site URL: [https://frontend-mentor-todo-app-solution-eight.vercel.app/](https://frontend-mentor-todo-app-solution-eight.vercel.app/)
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+### Ferramentas Utilizadas no Desenvolvimento:
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+- Html Semantico
+- Flexbox
+- Mobile-first
+- [SASS](https://sass-lang.com/guide) - Pré Processador de CSS
+- [Vite](https://vitejs.dev/) - Builder
+- [JqueryUi](https://jqueryui.com/) - Biblioteca JS **Usei apenas para o Drag and Drop.
 
-## Create a custom `README.md`
+### O que Aprendi ao Desenvolver esse Projeto.
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+- CRUD
+- Metodos de Array e Objetos
+- Trabalhar com Local Storage
+- BEM
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+## 📫 Contribuindo para <Frontend Mentor TODO List>
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+Para contribuir com <Frontend Mentor TODO List>, siga estas etapas:
 
-## Submitting your solution
+1. Bifurque este repositório.
+2. Crie um branch: `git checkout -b <nome_branch>`.
+3. Faça suas alterações e confirme-as: `git commit -m '<mensagem_commit>'`
+4. Envie para o branch original: `git push origin <nome_do_projeto> / <local>`
+5. Crie a solicitação de pull.
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
-
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
-
-## Sharing your solution
-
-There are multiple places you can share your solution:
-
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).

@@ -18,8 +18,10 @@ todoForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
   if (!todoText.value || todoText.value.length < 5) {
-    todoText.placeholder = "Digite no minimo 5 caracteres";
+    todoText.value = "Digite pelo menos 5 caracteres";
+    todoText.classList.add("invalid")
   } else {
+    todoText.classList.remove("invalid")
     todoText.placeholder = "Create a new todo";
     addTodo(todoText.value, theme);
     setLocalStorageIten();
@@ -51,8 +53,9 @@ document.addEventListener("click", (event) => {
       event.preventDefault();
 
       if (!inputEdit.value || inputEdit.value.length < 5) {
-        // inputEdit.placeholder = "Digite no minimo 5 caracteres";
+        inputEdit.classList.add("invalid")
       } else {
+        inputEdit.classList.remove("invalid")
         const newTodo = {
           toDo: inputEdit.value,
           todoId: inputEdit.closest("li").id,
