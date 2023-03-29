@@ -1,12 +1,9 @@
 # Frontend Mentor TODO List
 
-![GitHub repo size](https://img.shields.io/github/repo-size/https://github.com/jumaelmartins/Frontend-Mentor-Todo-app-solution?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/https://github.com/jumaelmartins/Frontend-Mentor-Todo-app-solution?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/https://github.com/jumaelmartins/Frontend-Mentor-Todo-app-solution?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/https://github.com/jumaelmartins/Frontend-Mentor-Todo-app-solution?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/https://github.com/jumaelmartins/Frontend-Mentor-Todo-app-solution?style=for-the-badge)
-
+#### Previa Desktop
 <img src="screenshot-desktop.png" alt="screenshot versão desktop">
+
+#### Previa Mobile
 <img src="screenshot-mobile.png" alt="screenshot versão mobile">
 
 Frontend Mentor TODO List App, crie, atualize, complete e gerencie suas tarefas com essa ferramenta. Desafio feito usando como referencia o Design do Frontend mentor:
