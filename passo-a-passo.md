@@ -50,7 +50,8 @@
 [X] - Função de arrastar os itens.
 [X] - Botão para Editar todo.
 [X] - Validação no form.
-[] - Corrigir bug no contador
+[X] - Corrigir bug no contador
+[X] - Corrigir bug no botão clear complete
 [] - Adicionar Opção de inserir data para a tarefa.
 [] - Modal com validação antes de apagar itens.
 [] - Atualizar lista - Apos Drag and Drop

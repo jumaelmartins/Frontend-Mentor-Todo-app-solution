@@ -96,6 +96,7 @@ export const removeCompletedTodo = (item) => {
   const newTodo = todoList.filter((todo) => todo.todoComplete !== item);
   todoList = newTodo;
   setLocalStorageIten();
+  console.log(newTodo)
   loadTodo();
   let theme = getTheme();
   setdarkMode(theme);

@@ -59,7 +59,7 @@ document.addEventListener("click", (event) => {
         const newTodo = {
           toDo: inputEdit.value,
           todoId: inputEdit.closest("li").id,
-          todoComplete: inputEdit.parentNode.previousElementSibling.className,
+          todoComplete: inputEdit.parentNode.previousElementSibling.classList.contains("complete") ? "complete" : false,
           mode: theme,
         };
 
@@ -83,7 +83,7 @@ document.addEventListener("click", (event) => {
     const newTodo = {
       toDo: p.innerText,
       todoId: event.target.closest("li").id,
-      todoComplete: event.target.parentNode.className,
+      todoComplete: event.target.parentNode.classList.contains("complete") ? "complete" : false,
       mode: theme,
     };
 
@@ -134,6 +134,7 @@ document.addEventListener("click", (event) => {
 
   if (event.target.innerText === "clear completed") {
     removeCompletedTodo("complete");
+    console.log("teste")
   }
 
   if (event.target.classList.contains("header__icon")) {
