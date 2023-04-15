@@ -13,22 +13,31 @@ const todoText = document.querySelector("#input-todo");
 const todoForm = document.querySelector("#todo-form");
 const filterItem = document.querySelectorAll(".todo-list__filter__item");
 
+todoText.focus();
+
 todoForm.addEventListener("submit", (event) => {
   let theme = getTheme();
   event.preventDefault();
 
   if (todoText.value.length < 5) {
-    todoText.value = "Digite pelo menos 5 caracteres";
+    todoText.value = "";
+    todoText.placeholder = "Digite pelo menos 5 caracteres";
     todoText.classList.add("invalid");
   } else {
     todoText.classList.remove("invalid");
-    // todoText.placeholder = "Create a new todo";
+    todoText.placeholder = "Create a new todo";
     addTodo(todoText.value, theme);
     setLocalStorageIten();
     loadTodo();
     setdarkMode(theme);
+    todoText.value = "";
+    todoText.focus();
   }
 });
+
+todoForm.addEventListener("change", e => {
+  todoText.classList.remove("invalid");
+})
 
 document.addEventListener("click", (event) => {
   let theme = getTheme();
@@ -58,6 +67,7 @@ document.addEventListener("click", (event) => {
     p.classList.toggle("hidden");
     inputEdit.value = p.innerText;
     formEdit.classList.toggle("hidden");
+    inputEdit.focus();
 
     formEdit.addEventListener("submit", (event) => {
       event.preventDefault();

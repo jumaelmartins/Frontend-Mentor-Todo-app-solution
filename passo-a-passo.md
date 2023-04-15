@@ -53,9 +53,10 @@
 [X] - Corrigir bug no contador
 [X] - Corrigir bug no botão clear complete
 [X] - Modal com validação antes de apagar itens.
+[X] - Botão para editar todo
+[] - Fix após criar tarefa limpar o input, auto focus nos inputs.
 [] - Adicionar Opção de inserir data para a tarefa.
 [] - Adicionar tarefas deletadas em um Array para poder recuperalas posteriormente
 [] - Atualizar lista - Apos Drag and Drop
 [] - Corrigir função drag and drop no mobile
-[] - Botão para editar todo
 [] - Paginação.
