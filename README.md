@@ -26,17 +26,18 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 - [X] Validação no Form, criar tarefas com no minimo 5 caracteres.
 - [X] Botão para editar tarefas.
+- [X] Modal com validação antes de apagar itens.
 - [] Adicionar Opção de inserir data para a tarefa.
-- [] Modal com validação antes de apagar itens.
 - [] Atualizar lista - Apos Drag and Drop
 - [] Corrigir função drag and drop no mobile
 - [] Paginação exibir no maximo 07 tarefas por pagina.
+- [] Lixeira para os Items Excluidos.
 
 ## 💻 Pré-requisitos
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
-* Você instalou a versão mais recente de `<nodejs 18v lts ou superior>
+* Você instalou a versão mais recente de <nodejs 18v lts ou superior>
 
 ## 🚀 Instalando <Frontend_Mentor_TODO_List>
 
@@ -45,10 +46,10 @@ Para instalar o <Frontend_Mentor_TODO_List>, siga estas etapas:
 Windows:
 ```
 digitar no terminal para baixar o repositorio
-<git clone https://github.com/jumaelmartins/Frontend-Mentor-Todo-app-solution.git>
+git clone https://github.com/jumaelmartins/Frontend-Mentor-Todo-app-solution.git
 
 ao abrir a pasta do repositorio utilizar o comando abaixo para instalar as dependencias
-<npm i>
+npm i
 
 ```
 
@@ -56,9 +57,26 @@ ao abrir a pasta do repositorio utilizar o comando abaixo para instalar as depen
 
 Para usar <Frontend_Mentor_TODO_List>, siga estas etapas:
 
+Abrir em ambiente de densevolvimento:
+
 com o projeto já instalado rodar o comando abaixo no terminal para inicializar o servidor local.
+
 ```
-<npm run dev>
+npm run dev
+```
+
+Abrir em produção
+
+com o projeto já instalado rodar os comandos abaixo no terminal para inicializar o servidor local.
+
+```
+npm run build
+```
+
+após a build ser criada rodar o comando abaixo.
+
+```
+npm run preview
 ```
 
 
