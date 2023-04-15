@@ -52,8 +52,9 @@
 [X] - Validação no form.
 [X] - Corrigir bug no contador
 [X] - Corrigir bug no botão clear complete
+[X] - Modal com validação antes de apagar itens.
 [] - Adicionar Opção de inserir data para a tarefa.
-[] - Modal com validação antes de apagar itens.
+[] - Adicionar tarefas deletadas em um Array para poder recuperalas posteriormente
 [] - Atualizar lista - Apos Drag and Drop
 [] - Corrigir função drag and drop no mobile
 [] - Botão para editar todo

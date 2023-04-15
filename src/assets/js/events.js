@@ -17,12 +17,12 @@ todoForm.addEventListener("submit", (event) => {
   let theme = getTheme();
   event.preventDefault();
 
-  if (!todoText.value || todoText.value.length < 5) {
+  if (todoText.value.length < 5) {
     todoText.value = "Digite pelo menos 5 caracteres";
-    todoText.classList.add("invalid")
+    todoText.classList.add("invalid");
   } else {
-    todoText.classList.remove("invalid")
-    todoText.placeholder = "Create a new todo";
+    todoText.classList.remove("invalid");
+    // todoText.placeholder = "Create a new todo";
     addTodo(todoText.value, theme);
     setLocalStorageIten();
     loadTodo();
@@ -32,9 +32,19 @@ todoForm.addEventListener("submit", (event) => {
 
 document.addEventListener("click", (event) => {
   let theme = getTheme();
+  const modal = document.querySelector(".modal__container");
+  const confirm = document.querySelector(".modal__button__yes");
 
   if (event.target.className === "todo__remove") {
-    removeTodo(event.target.closest("li").id);
+    modal.classList.remove("hidden");
+    confirm.addEventListener("click", (e) => {
+      modal.classList.add("hidden");
+      removeTodo(event.target.closest("li").id);
+    });
+  }
+
+  if (event.target.className === "modal__button__no") {
+    modal.classList.add("hidden");
   }
 
   if (event.target.className === "todo__edit") {
@@ -52,14 +62,19 @@ document.addEventListener("click", (event) => {
     formEdit.addEventListener("submit", (event) => {
       event.preventDefault();
 
-      if (!inputEdit.value || inputEdit.value.length < 5) {
-        inputEdit.classList.add("invalid")
+      if (inputEdit.value.length < 5) {
+        inputEdit.classList.add("invalid");
       } else {
-        inputEdit.classList.remove("invalid")
+        inputEdit.classList.remove("invalid");
         const newTodo = {
           toDo: inputEdit.value,
           todoId: inputEdit.closest("li").id,
-          todoComplete: inputEdit.parentNode.previousElementSibling.classList.contains("complete") ? "complete" : false,
+          todoComplete:
+            inputEdit.parentNode.previousElementSibling.classList.contains(
+              "complete"
+            )
+              ? "complete"
+              : false,
           mode: theme,
         };
 
@@ -83,7 +98,9 @@ document.addEventListener("click", (event) => {
     const newTodo = {
       toDo: p.innerText,
       todoId: event.target.closest("li").id,
-      todoComplete: event.target.parentNode.classList.contains("complete") ? "complete" : false,
+      todoComplete: event.target.parentNode.classList.contains("complete")
+        ? "complete"
+        : false,
       mode: theme,
     };
 
@@ -91,6 +108,7 @@ document.addEventListener("click", (event) => {
     setLocalStorageIten();
     updateCounter();
   }
+
   if (event.target.innerText === "all") {
     filterItem.forEach((item) => item.classList.remove("selected"));
     event.target.classList.add("selected");
@@ -123,7 +141,7 @@ document.addEventListener("click", (event) => {
     event.target.classList.add("selected");
 
     const todoItem = document.querySelectorAll("label");
-    
+
     todoItem.forEach((item) => {
       if (item.classList.contains("complete")) {
         item.closest("li").classList.remove("hidden");
@@ -133,8 +151,11 @@ document.addEventListener("click", (event) => {
   }
 
   if (event.target.innerText === "clear completed") {
-    removeCompletedTodo("complete");
-    console.log("teste")
+    modal.classList.remove("hidden");
+    confirm.addEventListener("click", (e) => {
+      modal.classList.add("hidden");
+      removeCompletedTodo("complete");
+    });
   }
 
   if (event.target.classList.contains("header__icon")) {

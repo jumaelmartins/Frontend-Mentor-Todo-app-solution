@@ -77,3 +77,12 @@ body {
       map-get(variables.$light-theme, very-light-grayish);
   }
 }
+
+
+li > div {
+ display: flex;
+}
+
+
+
+

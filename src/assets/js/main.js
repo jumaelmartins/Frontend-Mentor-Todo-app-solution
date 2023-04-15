@@ -6,8 +6,4 @@ import "./toggle-theme";
 
 loadTodo();
 
-$(function () {
-  $("#todo-list").sortable({
-    handle: ".handle",
-  });
-});
+

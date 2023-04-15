@@ -4,6 +4,7 @@ import { updateCounter } from "./counter";
 import crossIcon from "/images/icon-cross.svg";
 import editIcon from "/images/edit-icon.svg";
 import { getTheme, setdarkMode } from "./toggle-theme";
+
 export let todoList = getLocalStorageItens();
 
 export const addTodo = (toDoText, theme) => {
@@ -63,12 +64,14 @@ export const loadTodo = () => {
     item.classList.add("light-mode");
     item.classList.remove("dark-mode");
   });
+
   $(function () {
     $("#todo-list").sortable({
       handle: ".handle",
       touchAction: 'none'
     });
   });
+
   setLocalStorageIten();
   updateCounter();
 };
@@ -102,3 +105,4 @@ export const removeCompletedTodo = (item) => {
   setdarkMode(theme);
   updateCounter();
 };
+

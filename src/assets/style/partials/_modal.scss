@@ -1,0 +1,54 @@
+
+
+.modal__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($color: #fff, $alpha: 0.3);
+    color: red;
+}
+
+.modal__content {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    box-shadow: 0 0 5px 1px darkgray;
+    padding: 1rem;
+    min-height: 20rem;
+    width: 70rem;
+    max-width: 90%;
+    gap: 3rem;
+
+    button {
+        padding: 1rem;
+        border: none;
+        cursor: pointer;
+        margin: .5rem;
+        &:hover {
+            opacity: .7;
+        }
+        &:active {
+            box-shadow: none;
+        }
+    }
+}
+
+.modal__button__yes {
+    background-color: red;
+    box-shadow: 0 0 3px 1px darkred;
+    color: white;
+}
+.modal__button__no {
+    background-color: green;
+    box-shadow: 0 0 3px 1px darkgreen;
+    color: white;
+}
