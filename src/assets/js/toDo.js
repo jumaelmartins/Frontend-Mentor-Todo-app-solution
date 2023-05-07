@@ -84,6 +84,7 @@ const convertTodoListToHtml = (todo) => {
         todo.todoComplete === "complete" ? "checked" : ""
       } class="todo-list__input ${todo.mode}" type="checkbox" />
       <p>${todo.toDo}</p>
+      <p class="check hidden">✓</p>
       </label>
       <form class="hidden todo-list__form__edit">
       <input class="todo-list__input__edit" type="search">

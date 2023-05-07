@@ -13,6 +13,9 @@ const todoText = document.querySelector("#input-todo");
 const todoForm = document.querySelector("#todo-form");
 const filterItem = document.querySelectorAll(".todo-list__filter__item");
 
+
+
+
 todoText.focus();
 
 todoForm.addEventListener("submit", (event) => {
@@ -161,11 +164,14 @@ document.addEventListener("click", (event) => {
   }
 
   if (event.target.innerText === "clear completed") {
-    modal.classList.remove("hidden");
-    confirm.addEventListener("click", (e) => {
-      modal.classList.add("hidden");
-      removeCompletedTodo("complete");
-    });
+    const complete = document.querySelectorAll(".complete")
+    if (complete.length > 0) {
+      modal.classList.remove("hidden");
+      confirm.addEventListener("click", (e) => {
+        modal.classList.add("hidden");
+        removeCompletedTodo("complete");
+      });
+    }
   }
 
   if (event.target.classList.contains("header__icon")) {
@@ -176,4 +182,20 @@ document.addEventListener("click", (event) => {
       event.target.src = "/images/icon-sun.svg";
     }
   }
+  if (event.target.classList.contains("todo-list__input")) {
+    const label = event.target.closest("label");
+    const check = label.lastElementChild;
+
+    label.classList.contains("complete") ? check.classList.remove("hidden") : check.classList.add("hidden");
+  }
 });
+
+window.addEventListener("load", event => {
+  const todolistInput = document.querySelectorAll(".todo-list__input")
+  todolistInput.forEach(input => {
+    const label = input.closest("label");
+    const check = label.lastElementChild;
+
+    label.classList.contains("complete") ? check.classList.remove("hidden") : check.classList.add("hidden");
+  })
+})

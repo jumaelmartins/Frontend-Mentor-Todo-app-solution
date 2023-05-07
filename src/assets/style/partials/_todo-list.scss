@@ -16,13 +16,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 1.5rem;
-  ::before {
-    left: 1.9rem;
-    position: absolute;
-    content: "\2714";
-    font-size: 1rem;
-    color: white;
-  }
 
   div {
     display: flex;
@@ -38,22 +31,12 @@
     align-items: center;
     cursor: grab;
     max-width: 100%;
+    gap: 1rem;
 
     &:active {
       cursor: grabbing;
     }
   }
-
-  // .todo-list__form__edit {
-  //   display: flex;
-  //   button {
-  //     width: 1.6rem;
-  //     border: none;
-  //     background: url(/images/send-icon.svg);
-  //     background-position: center;
-  //     background-size: cover;
-  //   }
-  // }
 
   .todo-list__input__edit {
     color: inherit;
@@ -70,7 +53,6 @@
     width: 1.6rem;
     height: 1.6rem;
     border-radius: 100%;
-    margin-right: 1rem;
     cursor: pointer;
   }
 }
@@ -106,4 +88,10 @@
     align-items: center;
     height: 5rem;
   }
+}
+
+.check {
+  position: absolute;
+  left: 1.8rem;
+  color: white;
 }
